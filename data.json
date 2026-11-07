@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "updated_at": "示例数据",
+  "source": "所有公司和活动均为虚构示例，不代表真实招聘信息。",
+  "jobs": [
+    {"id":"demo-job-1","company":"示例消费科技公司","role":"用户增长运营","category":"增长运营","location":"上海（示例）","eligibility":"应届生，本科及以上（示例）","deadline":"未设置","url":"https://example.com/","fit":"用户研究、活动策划和数据复盘","availability":"官网岗位列表","verified":"虚构示例，非真实招聘"},
+    {"id":"demo-job-2","company":"示例互联网公司","role":"产品运营","category":"产品运营","location":"上海（示例）","eligibility":"应届生（示例）","deadline":"未设置","url":"https://example.com/","fit":"需求分析、跨团队协作","availability":"官网岗位列表","verified":"虚构示例，非真实招聘"}
+  ],
+  "fairs": [
+    {"id":"demo-fair-1","date":"2099-11-18","time":"13:00–16:00","name":"示例高校秋季招聘会","location":"示例校区","audience":"应届毕业生（示例）","entry":"虚构活动，无需报名","roles":"产品、市场、运营（示例）","url":"https://example.com/","published":"示例数据","verified":"虚构示例，非真实活动"}
+  ]
+}

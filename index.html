@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>求职机会跟踪表 · 演示版</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="mast-inner">
+      <div class="identity"><span class="identity-mark">求</span><span>求职机会跟踪表 · 演示版</span></div>
+      <div class="mast-note">示例数据 · 本地运行 · 可自定义</div>
+    </div>
+  </header>
+  <main class="page">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">岗位与活动，一处跟进</p>
+        <h1>把下一步放在眼前。</h1>
+        <p class="intro-copy">所有岗位与活动均为虚构示例，不代表真实招聘。标记与备注只保存在本机。</p>
+      </div>
+      <div class="asof" aria-live="polite"><span>最近核查</span><strong id="updated-at">读取中</strong></div>
+    </section>
+
+    <section class="workbench" aria-label="求职信息表">
+      <div class="workbench-top">
+        <div class="tabs" role="tablist" aria-label="表格类别">
+          <button id="jobs-tab" class="tab active" type="button" role="tab" aria-selected="true">岗位清单 <span id="jobs-count">—</span></button>
+          <button id="fairs-tab" class="tab" type="button" role="tab" aria-selected="false">招聘会 <span id="fairs-count">—</span></button>
+        </div>
+        <p class="save-status" id="save-status" role="status">标记会自动保存</p>
+      </div>
+      <div class="controls">
+        <label class="search-wrap"><span class="sr-only">搜索</span><input id="search" type="search" placeholder="搜索企业、岗位、区域或活动"></label>
+        <label class="filter-wrap"><span>线索状态</span><select id="availability-filter"><option value="">全部</option><option value="官网岗位页">官网岗位页</option><option value="官网岗位列表">官网岗位列表</option><option value="历史线索">历史线索</option></select></label>
+        <label class="upcoming-wrap" id="upcoming-wrap" hidden><input id="upcoming" type="checkbox" checked><span>只看未结束</span></label>
+        <button id="reload" class="reload" type="button">刷新数据</button>
+      </div>
+      <div id="error" class="error" hidden></div>
+      <div id="jobs-panel" role="tabpanel" aria-labelledby="jobs-tab">
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>企业 / 岗位</th><th>地点与要求</th><th>截止</th><th>匹配点与核查状态</th><th>投递 / 来源</th><th>我的进度</th><th>备注</th></tr></thead>
+            <tbody id="jobs-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div id="fairs-panel" role="tabpanel" aria-labelledby="fairs-tab" hidden>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>日期 / 时间</th><th>招聘会与地点</th><th>报名 / 入场</th><th>企业与岗位</th><th>官方入口</th><th>我的进度</th><th>备注</th></tr></thead>
+            <tbody id="fairs-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="footnote">“官网岗位页”是官方职位入口，不代表仍有名额；“官网岗位列表”需进入官网查找岗位；“历史线索”只证明该企业曾在已结束招聘会列出该岗位，当前是否招聘、投递方式与届别均待核实。投递与出行前请再次核对。</div>
+    </section>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
